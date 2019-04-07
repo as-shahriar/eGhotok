@@ -1,0 +1,47 @@
+label {
+      display:inline-flex;
+}
+.form{
+  margin-top: 30px;
+}
+.marginbottom{
+  margin-bottom: 30px;
+}
+
+#textmsg{
+  font-size: 15px;
+}
+
+#username{
+  background-color: #f4f4f4;
+  pointer-events: none;
+}
+
+#pro_pic{
+  max-width: 300px;
+  margin-top: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.12);
+
+}
+
+.delete{
+  margin: 50px;
+  margin-left: 75px;
+
+}
+@media (max-width: 750px){
+  #pro_pic{
+    max-width: 150px;
+    margin-top: 50px;
+    align-items: center;
+
+  }
+}
+
+@media (max-width: 540px){
+  #pro_pic{
+    max-width: 150px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}

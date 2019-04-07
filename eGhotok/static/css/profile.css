@@ -1,0 +1,35 @@
+input{
+  pointer-events: none;
+}
+.info{
+  margin-top: 50px;
+  font-size: 25px;
+  background-color: #f2f1ef;
+  color: #2e3131;
+  padding: 30px;
+  padding: 30px 100px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.12);
+}
+#pro_pic{
+  max-width: 300px;
+  margin-top: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+#fbicon{
+  max-width: 50px;
+  margin-top: 30px;
+  margin-left: 80px;
+}
+
+#instaicon{
+  max-width: 70px;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+#textmsg{
+  font-size: 30px;
+  margin-top: 20px;
+}

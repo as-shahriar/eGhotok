@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% extends 'myapp/base.html' %}
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+{% block navbar %}
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static '/css/profile.css' %}">
+    <title>Profile</title>
+</head>
+
+<body>
+    <div class="form container ">
+        <div class="float-left">
+            <img id='pro_pic' class='img-fluid img-thumbnail' src={{pic.url}} alt="Profile pic">
+            <h3 id="textmsg" align='center'>{{person.name}}</h3>
+            {% if person.fb != "" %}
+            <a href={{person.fb}} target="_blank"><img id='fbicon' class='img-fluid ' src="{% static '/img/fbicon.png' %}" alt="Fb icon"></a>
+            {% endif %}
+            {% if person.insta != "" %}
+            <a href={{person.insta}} target="_blank"><img id='instaicon' class='img-fluid ' src="{% static '/img/instaicon.jpg' %}" alt="Insta icon"></a>
+            {% endif %}
+        </div>
+
+        <div class=" float-right">
+
+            <p class='info'><strong>Name:</strong> {{person.name}}<br>
+                <b>Age:</b> {{person.age}}<br>
+                <b>Address:</b> {{person.address}}<br>
+                <b>City:</b> {{person.city}}<br>
+                <b>Cell No:</b> {{person.cell}}<br>
+                <b>Religion:</b> {{person.religion}}<br>
+                {% if person.education_level != "" %}
+                <b>Education Level:</b> {{person.education_level}}<br>
+                {%endif%}
+                {% if person.education_level != "" %}
+                <b>Education Field:</b> {{person.education_field}}<br>
+                {%endif%}
+                {% if person.education_level != "" %}
+                <b>Work As:</b> {{person.work_as}}<br>
+                {%endif%}
+                {% if person.education_level != "" %}
+                <b>Work In:</b> {{person.work_in}}<br>
+                {%endif%}
+
+
+            </p>
+
+
+        </div>
+    </div>
+
+</body>
+{% endblock %}
+
+</html>

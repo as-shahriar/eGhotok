@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% extends 'myapp/base.html' %}
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+{% block navbar %}
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="{% static '/css/edit_profile.css' %}">
+</head>
+
+<body>
+    {% if messages %}
+    {% for msg in messages %}
+    <div class="alert alert-warning alert-dismissible fade show" id="hide" role="alert">
+        <h1 align='center' id='textmsg'>{{msg}}</h1>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+    {% endif %}
+    <div class="form container ">
+        <div class="float-left ">
+            <img id='pro_pic' class='img-fluid img-thumbnail' src={{pic.url}} alt="Profile pic">
+            <h3 align='center'>{{user}}</h3>
+
+            <form class="delete" action="{% url 'myapp:deleteAc' %}" method="get">
+                <input type="submit" class="btn btn-danger" value="Delete Account">
+            </form>
+        </div>
+
+        <div class=" float-right">
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{form1.as_p}}
+                {{form2.as_p}}
+                <input type="submit" class="btn btn-success float-right marginbottom" value="Save">
+            </form>
+        </div>
+    </div>
+
+
+
+</body>
+<script type="text/javascript">
+    setTimeout(function() {
+        document.getElementById("hide").style.display = "none";
+    }, 5000);
+</script>
+{% endblock %}
+
+</html>
