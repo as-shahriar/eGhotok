@@ -2,5 +2,5 @@
 CSE311 project using Django and MySQL.
 <br>
 <br>
-![](Screenshot.png)
+![](Screenshot.jpg)
 
