@@ -20,8 +20,8 @@ class UserInfoForm(forms.ModelForm):
         model = UserInfo
         fields =("name","fb","insta","cell","age","gender","address","city","education_level" ,"education_field","work_as","work_in" ,"religion",'pic')
         widgets = {"name":forms.TextInput(attrs={'class':'form-control','placeholder': 'Full Name'}),
-                   "fb":forms.URLInput(attrs={'class':'form-control','placeholder': 'https://www.facebook.com/yourId'}),
-                   "insta":forms.TextInput(attrs={'class':'form-control','placeholder': 'https://www.instagram.com/yourId'}),
+                   "fb":forms.URLInput(attrs={'class':'form-control','placeholder': 'https://www.facebook.com/yourid'}),
+                   "insta":forms.TextInput(attrs={'class':'form-control','placeholder': 'https://www.instagram.com/yourid'}),
                    "cell":forms.TextInput(attrs={'class':'form-control','placeholder': 'Mobile No'}),
                    "age":forms.TextInput(attrs={'class':'form-control','placeholder': 'Age' }),
                    "gender":forms.TextInput(attrs={'class':'form-control','placeholder': 'Gender' }),

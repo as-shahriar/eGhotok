@@ -12,7 +12,7 @@ urlpatterns = [
     path('logout/',views.logout_view,name='logout_page'),
     path('complete_profile',views.complete_profile_view,name='complete_profile'),
     path('edit',views.edit_profile_view,name="edit_profile"),
-    path('profile/<userid>',views.profile,name="profile"),
+    path('profile/<slug:slugtxt>',views.profile,name="profile"),
     path('delete_account',views.deleteAc_view,name="deleteAc")
 
 ]

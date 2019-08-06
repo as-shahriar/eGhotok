@@ -8,7 +8,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Home</title>
+    <title>e-Ghotok : Home</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static "/css/home.css" %}">
     <link rel="stylesheet" href="{% static '/css/base.css' %}">
@@ -44,7 +44,7 @@
 
             {% for a in object %}
             {% if a.user_id != user.id and gen == 'all' %}
-            <a href="{% url 'myapp:profile' a.user_id %}" id='atag'>
+            <a href="{% url 'myapp:profile' a.slug %}" id='atag'>
                 <div class="card cardwidth img-thumbnail col-lg-3">
                     <img class="card-img-top fl " src="{{a.pic.url}}">
                     <div class="card-body">

@@ -161,8 +161,8 @@ def home_female(request):
 
 
 @login_required
-def profile(request,userid):
-    user_data = UserInfo.objects.get(user_id=userid)
+def profile(request,slugtxt):
+    user_data = UserInfo.objects.get(slug=slugtxt)
     return render(request,'myapp/profile.html',{'person':user_data,"pic":user_data.pic})
 
 @login_required
