@@ -170,6 +170,8 @@ def deleteAc_view(request):
     user_name = request.user.username
     try:
         u = User.objects.get(username = user_name)
+        n = UserInfo.objects.get(user = u)
+        n.pic.delete()
         u.delete()
         messages.success(request, "Account deleted successfully!")
         return redirect("myapp:login_page")
